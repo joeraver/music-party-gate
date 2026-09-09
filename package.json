@@ -1,0 +1,27 @@
+{
+  "name": "music-party-gate",
+  "version": "1.0.0",
+  "description": "Gatekeeper web app for Music Assistant Party Mode with trivia gating and rate-limited rewards",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev:server": "node server/server.js",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "node server/server.js",
+    "build": "npm --prefix client install && npm --prefix client run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "keywords": [
+    "music-assistant",
+    "party-mode",
+    "halloween",
+    "trivia-gate",
+    "jukebox"
+  ],
+  "author": "",
+  "license": "MIT"
+}

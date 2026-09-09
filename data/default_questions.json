@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q1",
+    "question": "Who sang the iconic 1984 spooky synth-pop hit 'Somebody's Watching Me'?",
+    "options": ["Rockwell", "Michael Jackson", "Rick James", "Prince"],
+    "answer": "Rockwell",
+    "explanation": "Rockwell recorded the track in 1984, featuring his childhood friend Michael Jackson singing the famous chorus!",
+    "category": "Halloween Music"
+  },
+  {
+    "id": "q2",
+    "question": "In Bobby 'Boris' Pickett's legendary 1962 song 'Monster Mash', what dance was replaced by the Mash?",
+    "options": ["The Twist", "The Macarena", "The Charleston", "The Watusi"],
+    "answer": "The Twist",
+    "explanation": "The lyrics state: 'For my mash came a dancing from my laboratory / It grew to be a smash, and it replaced The Twist!'",
+    "category": "Halloween Music"
+  },
+  {
+    "id": "q3",
+    "question": "Which iconic horror director composed the chilling piano/synth theme for his own movie 'Halloween' (1978)?",
+    "options": ["John Carpenter", "Wes Craven", "George A. Romero", "Tobe Hooper"],
+    "answer": "John Carpenter",
+    "explanation": "John Carpenter composed the score himself in 5/4 time, creating one of cinema's most famous horror themes.",
+    "category": "Horror Soundtracks"
+  },
+  {
+    "id": "q4",
+    "question": "Which legendary horror film famously adopted Mike Oldfield's track 'Tubular Bells' as its chilling main theme?",
+    "options": ["The Exorcist", "The Shining", "Rosemary's Baby", "The Omen"],
+    "answer": "The Exorcist",
+    "explanation": "William Friedkin chose Oldfield's 'Tubular Bells' for the 1973 film, turning an avant-garde rock album into a terrifying classic.",
+    "category": "Horror Soundtracks"
+  },
+  {
+    "id": "q5",
+    "question": "What legendary horror movie icon delivered the chilling spoken-word outro in Michael Jackson's 'Thriller'?",
+    "options": ["Vincent Price", "Bela Lugosi", "Christopher Lee", "Boris Karloff"],
+    "answer": "Vincent Price",
+    "explanation": "Horror legend Vincent Price recorded the ominous rap and iconic sinister laugh in just two takes in 1982!",
+    "category": "Halloween Music"
+  },
+  {
+    "id": "q6",
+    "question": "In 'The Nightmare Before Christmas', which renowned composer wrote the score and sang Jack Skellington's songs?",
+    "options": ["Danny Elfman", "Hans Zimmer", "Alan Menken", "John Williams"],
+    "answer": "Danny Elfman",
+    "explanation": "Oingo Boingo frontman and legendary film composer Danny Elfman composed all songs and sang Jack's parts.",
+    "category": "Spooky Soundtracks"
+  },
+  {
+    "id": "q7",
+    "question": "Which shock-rock pioneer is known for his theatrical stage shows featuring guillotines, fake blood, and boa constrictors?",
+    "options": ["Alice Cooper", "Ozzy Osbourne", "Gene Simmons", "Marilyn Manson"],
+    "answer": "Alice Cooper",
+    "explanation": "Alice Cooper pioneered shock rock in the early 1970s with his grand guignol theatrical live concerts.",
+    "category": "Rock Trivia"
+  },
+  {
+    "id": "q8",
+    "question": "Who recorded the Oscar-nominated, chart-topping theme song for 1984's 'Ghostbusters'?",
+    "options": ["Ray Parker Jr.", "Huey Lewis", "Lionel Richie", "Stevie Wonder"],
+    "answer": "Ray Parker Jr.",
+    "explanation": "Ray Parker Jr. wrote and performed the famous anthem answering the musical question: 'Who you gonna call?'",
+    "category": "Halloween Music"
+  },
+  {
+    "id": "q9",
+    "question": "What 1994 alt-rock protest anthem by The Cranberries shares its title with a classic Halloween undead creature?",
+    "options": ["Zombie", "Vampire", "Skeleton", "Ghost"],
+    "answer": "Zombie",
+    "explanation": "'Zombie' was written by Dolores O'Riordan in 1994, becoming one of the decade's most powerful rock tracks.",
+    "category": "Rock Trivia"
+  },
+  {
+    "id": "q10",
+    "question": "In 'Hocus Pocus' (1993), which famous song does Winifred Sanderson (Bette Midler) perform at the party?",
+    "options": ["I Put a Spell on You", "Witchcraft", "Season of the Witch", "Black Magic Woman"],
+    "answer": "I Put a Spell on You",
+    "explanation": "Bette Midler's showstopping rendition of Screamin' Jay Hawkins' 1956 hit cast a dancing spell on all the parents of Salem!",
+    "category": "Halloween Pop Culture"
+  },
+  {
+    "id": "q11",
+    "question": "Which band's 1979 debut single 'Bela Lugosi's Dead' is widely considered the first gothic rock record?",
+    "options": ["Bauhaus", "The Cure", "Siouxsie and the Banshees", "The Sisters of Mercy"],
+    "answer": "Bauhaus",
+    "explanation": "Bauhaus recorded 'Bela Lugosi's Dead' in a single six-hour session in January 1979, launching gothic rock into the world.",
+    "category": "Goth & Alt Rock"
+  },
+  {
+    "id": "q12",
+    "question": "Which classic 1976 rock track by Blue Öyster Cult famously features a prominent cowbell and reassures 'Don't Fear the Reaper'?",
+    "options": ["(Don't Fear) The Reaper", "Burnin' for You", "Godzilla", "Cities on Flame"],
+    "answer": "(Don't Fear) The Reaper",
+    "explanation": "'(Don't Fear) The Reaper' appeared on 'Agents of Fortune' and was famously featured in John Carpenter's 'Halloween'.",
+    "category": "Classic Rock"
+  },
+  {
+    "id": "q13",
+    "question": "What song begins with the opening line: 'Very superstitious, writing's on the wall'?",
+    "options": ["Superstition by Stevie Wonder", "Spooky by Classics IV", "Bad Moon Rising by CCR", "Wicked Game by Chris Isaak"],
+    "answer": "Superstition by Stevie Wonder",
+    "explanation": "Stevie Wonder released 'Superstition' in 1972 on Talking Book, featuring one of the funkiest clavinet riffs in history!",
+    "category": "Funk & Soul"
+  },
+  {
+    "id": "q14",
+    "question": "In traditional Irish and Scottish folklore, what vegetable was originally carved into Jack-o'-lanterns before pumpkins?",
+    "options": ["Turnips", "Potatoes", "Eggplants", "Beets"],
+    "answer": "Turnips",
+    "explanation": "Turnips and rutabagas were carved into lanterns in the British Isles to ward off evil spirits before pumpkin carving spread in North America.",
+    "category": "Halloween Folklore"
+  },
+  {
+    "id": "q15",
+    "question": "Which 1975 cult classic musical comedy features the monster mash dance number 'The Time Warp'?",
+    "options": ["The Rocky Horror Picture Show", "Little Shop of Horrors", "Phantom of the Paradise", "Young Frankenstein"],
+    "answer": "The Rocky Horror Picture Show",
+    "explanation": "'It's just a jump to the left, and then a step to the right!' 'The Time Warp' remains an enduring Halloween dance floor staple.",
+    "category": "Halloween Pop Culture"
+  },
+  {
+    "id": "q16",
+    "question": "What spooky character has 'hair that was perfect' while eating beef chow mein in Warren Zevon's 1978 hit?",
+    "options": ["Werewolves of London", "Count Dracula", "Frankenstein's Monster", "The Invisible Man"],
+    "answer": "Werewolves of London",
+    "explanation": "Warren Zevon sings: 'I saw a werewolf drinking a piña colada at Trader Vic's / And his hair was perfect!'",
+    "category": "Classic Rock"
+  },
+  {
+    "id": "q17",
+    "question": "What Fleetwood Mac hit, written by Stevie Nicks, was inspired by a Welsh mythological enchantress?",
+    "options": ["Rhiannon", "Dreams", "Gold Dust Woman", "Landslide"],
+    "answer": "Rhiannon",
+    "explanation": "Stevie Nicks wrote 'Rhiannon' about a mystical Welsh goddess, frequently dedicating it to all the witches during live performances.",
+    "category": "Classic Rock"
+  },
+  {
+    "id": "q18",
+    "question": "Which spooky television family's theme song features iconic two-snap finger snaps and harpsichord riffs?",
+    "options": ["The Addams Family", "The Munsters", "Dark Shadows", "Scooby-Doo"],
+    "answer": "The Addams Family",
+    "explanation": "Composer Vic Mizzy wrote the theme and famously snapped his fingers himself for the overdubbed track in 1964!",
+    "category": "TV & Movies"
+  },
+  {
+    "id": "q19",
+    "question": "Which horror-punk pioneers fronted by Glenn Danzig released the track 'Halloween' in 1981?",
+    "options": ["Misfits", "The Cramps", "The Damned", "Dead Kennedys"],
+    "answer": "Misfits",
+    "explanation": "The Misfits released their legendary 'Halloween' single on Halloween day 1981 on Plan 9 Records.",
+    "category": "Punk Trivia"
+  },
+  {
+    "id": "q20",
+    "question": "What fruit is traditionally bobbed for in tubs of water as a classic Halloween game with ancient Celtic roots?",
+    "options": ["Apples", "Pumpkins", "Pears", "Oranges"],
+    "answer": "Apples",
+    "explanation": "Apple bobbing dates back to Roman festivities honoring Pomona, the goddess of fruit and orchards, blended with Celtic Samhain.",
+    "category": "Halloween Folklore"
+  },
+  {
+    "id": "q21",
+    "question": "Which hard rock artist released the hit single 'Dragula', titled after Grandpa Munster's dragster?",
+    "options": ["Rob Zombie", "Marilyn Manson", "Trent Reznor", "Danzig"],
+    "answer": "Rob Zombie",
+    "explanation": "Rob Zombie wrote 'Dragula' on his 1998 debut solo album 'Hellbilly Deluxe', inspired by the hot rod on 'The Munsters'.",
+    "category": "Metal & Rock"
+  },
+  {
+    "id": "q22",
+    "question": "Which gothic alternative rock band fronted by Robert Smith released the dark, haunting album 'Pornography' in 1982?",
+    "options": ["The Cure", "Joy Division", "Echo & the Bunnymen", "Depeche Mode"],
+    "answer": "The Cure",
+    "explanation": "The Cure released the brooding masterpiece 'Pornography' in 1982, one of the gloomiest and most celebrated post-punk albums ever.",
+    "category": "Goth & Alt Rock"
+  },
+  {
+    "id": "q23",
+    "question": "Which 1973 horror classic featured the chilling orchestral piece 'Dies Irae' during its opening credits sequence?",
+    "options": ["The Shining", "The Exorcist", "The Omen", "Poltergeist"],
+    "answer": "The Shining",
+    "explanation": "Stanley Kubrick opened 1980's 'The Shining' with Wendy Carlos and Rachel Elkind's ominous synthesizer adaptation of 'Dies Irae'.",
+    "category": "Horror Soundtracks"
+  },
+  {
+    "id": "q24",
+    "question": "What spooky color of cat is traditionally associated with witches, superstitions, and Halloween folklore?",
+    "options": ["Black", "Orange", "Calico", "White"],
+    "answer": "Black",
+    "explanation": "Black cats have been linked with witchcraft, mystery, and magic across European and American folklore for centuries.",
+    "category": "Halloween Folklore"
+  },
+  {
+    "id": "q25",
+    "question": "Who sang the iconic 1968 psych-pop gem 'Spooky', which later became a smash hit for Atlanta Rhythm Section in 1979?",
+    "options": ["Classics IV", "The Zombies", "The Doors", "The Guess Who"],
+    "answer": "Classics IV",
+    "explanation": "Classics IV featuring Dennis Yost reached #3 on the Billboard Hot 100 with 'Spooky' in 1968!",
+    "category": "Halloween Music"
+  }
+]
