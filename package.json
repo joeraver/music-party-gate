@@ -1,26 +1,24 @@
 {
   "name": "music-party-gate",
-  "version": "1.0.0",
-  "description": "Gatekeeper web app for Music Assistant Party Mode with trivia gating and rate-limited rewards",
-  "main": "server/server.js",
+  "version": "2.0.0",
+  "description": "Gatekeeper web app for Music Assistant Party Mode with trivia gating and rate-limited rewards - AWS S3 + CloudFront Edition",
   "scripts": {
-    "start": "node server/server.js",
-    "dev:server": "node server/server.js",
-    "dev:client": "npm --prefix client run dev",
-    "dev": "node server/server.js",
-    "build": "npm --prefix client install --no-save && npm --prefix client run build"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview",
+    "deploy": "powershell -ExecutionPolicy Bypass -File deploy/deploy-s3-cloudfront.ps1",
+    "deploy:bash": "bash deploy/deploy-s3-cloudfront.sh",
+    "invalidate": "powershell -ExecutionPolicy Bypass -File deploy/invalidate-cache.ps1"
   },
   "keywords": [
     "music-assistant",
     "party-mode",
     "halloween",
     "trivia-gate",
-    "jukebox"
+    "jukebox",
+    "aws",
+    "s3",
+    "cloudfront"
   ],
   "author": "",
   "license": "MIT"

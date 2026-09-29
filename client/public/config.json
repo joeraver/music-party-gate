@@ -1,0 +1,46 @@
+{
+  "theme": "halloween",
+  "partyTitle": "Spooky Beats Halloween Bash 🎃",
+  "partySubtitle": "Answer the crypt's trivia riddle to unlock the jukebox!",
+  "partyUrl": "https://home.raverendo.com/#/party",
+  "rewards": {
+    "boosts": 1,
+    "requests": 2
+  },
+  "redirectDelay": 4,
+  "adminPassword": "party",
+  "availableThemes": [
+    {
+      "id": "halloween",
+      "name": "Spooky Halloween 🎃",
+      "primaryColor": "#ff6b00",
+      "secondaryColor": "#8b5cf6",
+      "accentColor": "#10b981",
+      "badge": "🎃 Halloween Edition"
+    },
+    {
+      "id": "neon",
+      "name": "Electric Neon ⚡",
+      "primaryColor": "#ec4899",
+      "secondaryColor": "#3b82f6",
+      "accentColor": "#06b6d4",
+      "badge": "⚡ Neon Rave"
+    },
+    {
+      "id": "cyberpunk",
+      "name": "Cyberpunk 2077 🌆",
+      "primaryColor": "#facc15",
+      "secondaryColor": "#06b6d4",
+      "accentColor": "#f43f5e",
+      "badge": "🌆 Cyberpunk"
+    },
+    {
+      "id": "classic",
+      "name": "Midnight Lounge 🍸",
+      "primaryColor": "#6366f1",
+      "secondaryColor": "#14b8a6",
+      "accentColor": "#f59e0b",
+      "badge": "🍸 Midnight Lounge"
+    }
+  ]
+}

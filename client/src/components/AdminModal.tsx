@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Save, Lock, Sliders, Trash2, RotateCcw, ExternalLink, Plus, Check } from 'lucide-react';
+import { TriviaService } from '../services/triviaService';
 import { AppConfig, AdminQuestion } from '../types';
 
 interface AdminModalProps {
@@ -64,32 +65,22 @@ export const AdminModal: React.FC<AdminModalProps> = ({
     e.preventDefault();
     setLoginError('');
     try {
-      const res = await fetch('/api/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password })
-      });
-      const data = await res.json();
-      if (res.ok && data.success) {
+      const isValid = await TriviaService.verifyAdminPassword(password);
+      if (isValid) {
         setIsAuthenticated(true);
       } else {
-        setLoginError(data.message || 'Incorrect password');
+        setLoginError('Incorrect password');
       }
     } catch (err) {
-      setLoginError('Error connecting to server');
+      setLoginError('Error verifying credentials');
     }
   };
 
   const fetchQuestions = async () => {
     setIsLoadingQuestions(true);
     try {
-      const res = await fetch('/api/admin/questions', {
-        headers: { 'x-admin-password': password }
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setQuestions(data);
-      }
+      const data = await TriviaService.getAllQuestions();
+      setQuestions(data);
     } catch (err) {
       console.error('Error fetching questions:', err);
     } finally {
@@ -114,25 +105,14 @@ export const AdminModal: React.FC<AdminModalProps> = ({
         payload.adminPassword = newPassword.trim();
       }
 
-      const res = await fetch('/api/admin/config', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-password': password
-        },
-        body: JSON.stringify(payload)
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        if (newPassword.trim()) {
-          setPassword(newPassword.trim());
-          setNewPassword('');
-        }
-        onConfigSaved(data.config);
-        setSaveSuccess(true);
-        setTimeout(() => setSaveSuccess(false), 3000);
+      const updated = TriviaService.saveConfig(payload);
+      if (newPassword.trim()) {
+        setPassword(newPassword.trim());
+        setNewPassword('');
       }
+      onConfigSaved(updated);
+      setSaveSuccess(true);
+      setTimeout(() => setSaveSuccess(false), 3000);
     } catch (err) {
       console.error('Failed to save config:', err);
     }
@@ -160,7 +140,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({
     };
 
     const updated = [newQuestion, ...questions];
-    await saveQuestionsList(updated);
+    saveQuestionsList(updated);
     setNewQText('');
     setNewQOpts(['', '', '', '']);
     setNewQExp('');
@@ -170,40 +150,22 @@ export const AdminModal: React.FC<AdminModalProps> = ({
   const handleDeleteQuestion = async (id: string) => {
     if (!confirm('Are you sure you want to delete this question?')) return;
     const updated = questions.filter(q => q.id !== id);
-    await saveQuestionsList(updated);
+    saveQuestionsList(updated);
   };
 
   const handleResetDefaults = async () => {
     if (!confirm('Reset all questions back to the default Halloween trivia collection?')) return;
     try {
-      const res = await fetch('/api/admin/questions/reset', {
-        method: 'POST',
-        headers: { 'x-admin-password': password }
-      });
-      if (res.ok) {
-        fetchQuestions();
-      }
+      const defaults = await TriviaService.resetQuestions();
+      setQuestions(defaults);
     } catch (err) {
       console.error('Error resetting questions:', err);
     }
   };
 
-  const saveQuestionsList = async (updatedList: AdminQuestion[]) => {
-    try {
-      const res = await fetch('/api/admin/questions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-password': password
-        },
-        body: JSON.stringify({ questions: updatedList })
-      });
-      if (res.ok) {
-        setQuestions(updatedList);
-      }
-    } catch (err) {
-      console.error('Failed to save questions list:', err);
-    }
+  const saveQuestionsList = (updatedList: AdminQuestion[]) => {
+    TriviaService.saveQuestions(updatedList);
+    setQuestions(updatedList);
   };
 
   if (!isOpen) return null;

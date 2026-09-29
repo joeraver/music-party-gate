@@ -7,6 +7,8 @@ import { HostGuideModal } from './components/HostGuideModal';
 import { AppConfig, Question, VerifyResponse } from './types';
 import { Loader2 } from 'lucide-react';
 
+import { TriviaService } from './services/triviaService';
+
 export const App: React.FC = () => {
   const [config, setConfig] = useState<AppConfig>({
     theme: 'halloween',
@@ -42,11 +44,8 @@ export const App: React.FC = () => {
 
   const loadConfig = async () => {
     try {
-      const res = await fetch('/api/config');
-      if (res.ok) {
-        const data = await res.json();
-        setConfig(data);
-      }
+      const cfg = await TriviaService.getConfig();
+      setConfig(cfg);
     } catch (err) {
       console.error('Failed to load config:', err);
     }
@@ -55,13 +54,9 @@ export const App: React.FC = () => {
   const loadRandomQuestion = async (excludeList: string[]) => {
     setErrorMessage(null);
     try {
-      const excludeParam = excludeList.join(',');
-      const res = await fetch(`/api/quiz/random?exclude=${excludeParam}`);
-      if (res.ok) {
-        const q: Question = await res.json();
-        setCurrentQuestion(q);
-        setSeenQuestionIds(prev => [...prev.slice(-15), q.id]);
-      }
+      const q = await TriviaService.getRandomQuestion(excludeList);
+      setCurrentQuestion(q);
+      setSeenQuestionIds(prev => [...prev.slice(-15), q.id]);
     } catch (err) {
       console.error('Failed to fetch question:', err);
     }
@@ -73,23 +68,14 @@ export const App: React.FC = () => {
     setErrorMessage(null);
 
     try {
-      const res = await fetch('/api/quiz/verify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          questionId: currentQuestion.id,
-          selectedAnswer
-        })
-      });
-
-      const data: VerifyResponse = await res.json();
-      if (res.ok && data.success) {
+      const data = await TriviaService.verifyAnswer(currentQuestion.id, selectedAnswer);
+      if (data.success) {
         setVerifiedResult(data);
       } else {
         setErrorMessage(data.message || 'Incorrect answer! Give it another shot.');
       }
     } catch (err) {
-      setErrorMessage('Network error communicating with gatekeeper server.');
+      setErrorMessage('Unexpected error verifying answer.');
     } finally {
       setIsVerifying(false);
     }
