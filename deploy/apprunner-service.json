@@ -1,0 +1,19 @@
+{
+  "SourceConfiguration": {
+    "AuthenticationConfiguration": {
+      "ConnectionArn": "arn:aws:apprunner:us-east-1:746139443819:connection/music-party-gate-github/b8ae3910f0564857aed3ab90d72db60f"
+    },
+    "AutoDeploymentsEnabled": true,
+    "CodeRepository": {
+      "CodeConfiguration": {
+        "ConfigurationSource": "REPOSITORY"
+      },
+      "SourceCodeVersion": {
+        "Value": "main",
+        "Type": "BRANCH"
+      },
+      "RepositoryUrl": "https://github.com/joeraver/music-party-gate"
+    }
+  },
+  "ServiceName": "music-party-gate"
+}

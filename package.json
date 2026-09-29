@@ -8,7 +8,7 @@
     "dev:server": "node server/server.js",
     "dev:client": "npm --prefix client run dev",
     "dev": "node server/server.js",
-    "build": "npm --prefix client install && npm --prefix client run build"
+    "build": "npm --prefix client install --no-save && npm --prefix client run build"
   },
   "dependencies": {
     "cors": "^2.8.5",
