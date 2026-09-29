@@ -42,7 +42,7 @@ const DEFAULT_CONFIG: AppConfig & { adminPassword?: string } = {
   theme: 'halloween',
   partyTitle: 'Spooky Beats Halloween Bash 🎃',
   partySubtitle: "Answer the crypt's trivia riddle to unlock the jukebox!",
-  partyUrl: 'https://home.raverendo.com/#/party',
+  partyUrl: 'https://app.music-assistant.io/?remote_id=RS7CIUKGHSD7W3YJA7H9MTHPTI&join=NNEZM4Z7ZAP5',
   rewards: {
     boosts: 1,
     requests: 2
