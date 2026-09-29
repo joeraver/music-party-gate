@@ -17,8 +17,8 @@
 param(
   [string]$StackName = "music-party-gate",
   [string]$Region = "us-east-1",
-  [string]$DomainName = "",
-  [string]$AcmCertificateArn = ""
+  [string]$DomainName = "party.raverendo.com",
+  [string]$AcmCertificateArn = "arn:aws:acm:us-east-1:746139443819:certificate/5fe12878-b274-4acb-93fe-cb3e295488a8"
 )
 
 $ErrorActionPreference = "Stop"
@@ -63,6 +63,21 @@ Write-Host "  Build successful! Output ready in $distDir" -ForegroundColor Green
 
 # 3. Deploy CloudFormation Stack
 Write-Host "`n[3/5] Deploying CloudFormation infrastructure ($StackName in $Region)..." -ForegroundColor Yellow
+
+try {
+  $currentStatus = aws cloudformation describe-stacks `
+    --stack-name $StackName `
+    --region $Region `
+    --query "Stacks[0].StackStatus" `
+    --output text 2>$null
+  if ($currentStatus -and $currentStatus -like "*_IN_PROGRESS") {
+    Write-Host "  Stack is currently in $currentStatus state. Waiting for completion..." -ForegroundColor Yellow
+    aws cloudformation wait stack-update-complete --stack-name $StackName --region $Region
+  }
+} catch {
+  # Stack doesn't exist yet or error reading status
+}
+
 $templateFile = Join-Path $PSScriptRoot "cloudfront-s3.yaml"
 
 $params = @(

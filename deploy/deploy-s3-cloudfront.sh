@@ -6,8 +6,8 @@ set -euo pipefail
 
 STACK_NAME="${1:-music-party-gate}"
 REGION="${2:-us-east-1}"
-DOMAIN_NAME="${3:-}"
-ACM_CERT_ARN="${4:-}"
+DOMAIN_NAME="${3:-party.raverendo.com}"
+ACM_CERT_ARN="${4:-arn:aws:acm:us-east-1:746139443819:certificate/5fe12878-b274-4acb-93fe-cb3e295488a8}"
 
 echo "=========================================================="
 echo "  Music Party Gate -> AWS S3 + CloudFront Deployment"
